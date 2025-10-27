@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MEV Simulator Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MEV Simulator Dashboard</h1>
+    <h2>Mempool</h2>
+    <table id="mempool-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sender</th>
+                <th>Amount</th>
+                <th>Profit</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Candidate Block (Top Transactions)</h2>
+    <table id="block-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sender</th>
+                <th>Amount</th>
+                <th>Profit</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <!-- Template for table row -->
+    <template id="tx-row-template">
+        <tr>
+            <td class="tx-id"></td>
+            <td class="tx-sender"></td>
+            <td class="tx-amount"></td>
+            <td class="tx-profit"></td>
+            <td class="tx-timestamp"></td>
+        </tr>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
